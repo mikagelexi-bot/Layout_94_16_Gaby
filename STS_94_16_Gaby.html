@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LAYOUT HTML dan CSS</title>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="biodatastyle.css">
+        <link rel="stylesheet" href="STS_94_16_Gaby.css">
+        <link rel="stylesheet" href="table.html">
+    </head>
+    <body>
+        <!-- Header: biasa buat banner website -->
+        <div class="header">
+    <img src="header.gif" alt="Website Header">
+</div>
+            <!-- Kalo mau img tinggal masukin img -->
+         </div>
+
+         <div class="topnav">
+            <a href="index.html">Biodata</a>
+            <a href="table.html">Table</a>
+            <a href="list.html">List</a>
+            <a href="STS_94_16_Gaby.html">STS</a>
+         </div>
+<body>
+
+    <!-- Account Verification -->
+
+    <div id="verification-screen">
+
+        <div class="verification-card">
+
+            <div class="system-name">
+                NETSCAPE SYSTEM
+            </div>
+
+            <div class="lock-icon">
+                🔒
+            </div>
+
+            <h1>
+                ACCOUNT LOCKED
+            </h1>
+
+            <p class="welcome-text">
+                Welcome back, Gaby.
+                Please verify your identity to continue.
+            </p>
+
+            <div class="account-name">
+                pass: gaby94
+            </div>
+
+            <label for="password">
+                PASSWORD
+            </label>
+
+            <div class="password-box">
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter password..."
+                    autocomplete="off"
+                >
+
+                <span>✦</span>
+
+            </div>
+
+            <button type="button" onclick="unlockAccount()">
+                UNLOCK ACCOUNT
+            </button>
+
+            <p id="error-message"></p>
+
+            <div class="security-status">
+                STATUS: PROTECTED
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Main Website -->
+
+    <main id="main-content">
+
+        <!-- Header -->
+
+        <div class="retro-header">
+
+            <p class="small-title">
+                NETSCAPE YOUR WAY
+            </p>
+
+            <h2>
+                PENGGUNAAN MEDIA SOSIAL
+                DENGAN BIJAK
+            </h2>
+
+            <div class="header-bottom">
+
+                <button
+                    type="button"
+                    class="subtitle"
+                    onclick="openWarning()"
+                >
+                    Think before you click.
+                    Post with purpose.
+                </button>
+
+                <!-- Spotify Player -->
+
+                <div
+                    id="spotify-player"
+                    style="display: none;"
+                >
+
+                    <iframe
+                        src="https://open.spotify.com/embed/track/3THVfoVD5kdCxPviVaCPi7?utm_source=generator"
+                        width="300"
+                        height="80"
+                        frameborder="0"
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"
+                    >
+                    </iframe>
+
+                </div>
+
+            </div>
+
+
+            <!-- Warning Popup -->
+
+            <div
+                id="warning-popup"
+                style="display: none;"
+            >
+
+                <div class="warning-card">
+
+                    <img
+                        src="situs.png"
+                        alt="Warning website"
+                    >
+
+                    <p class="warning-text">
+                        You have encountered a suspicious website.
+                        Stay safe and think before you click.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="block-button"
+                        onclick="blockWebsite()"
+                    >
+                        BLOCK WEBSITE
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Topic Cards -->
+
+        <section class="topic-section">
+
+            <button
+                type="button"
+                class="topic-card"
+                onclick="showTopic('jenis2')"
+            >
+
+                <img
+                    src="jenis2.jpg"
+                    alt="Jenis-Jenis Medsos"
+                >
+
+                <h3>
+                    Jenis-Jenis Medsos
+                </h3>
+
+                <span>
+                    EXPLORE →
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="topic-card"
+                onclick="showTopic('dampak')"
+            >
+
+                <img
+                    src="dampak.jpg"
+                    alt="Dampak Medsos"
+                >
+
+                <h3>
+                    Dampak Medsos
+                </h3>
+
+                <span>
+                    EXPLORE →
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="topic-card"
+                onclick="showTopic('Etika')"
+            >
+
+                <img
+                    src="etika2.jpg"
+                    alt="Etika Penggunaan Medsos"
+                >
+
+                <h3>
+                    Etika Penggunaan
+                </h3>
+
+                <span>
+                    EXPLORE →
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="topic-card"
+                onclick="showTopic('fungsi')"
+            >
+
+                <img
+                    src="fungsi.jpg"
+                    alt="Fungsi Medsos"
+                >
+
+                <h3>
+                    Fungsi Medsos
+                </h3>
+
+                <span>
+                    EXPLORE →
+                </span>
+
+            </button>
+
+        </section>
+
+
+        <!-- Topic Explanation -->
+
+        <section
+            id="topic-detail"
+            class="content-card topic-detail"
+        >
+
+            <button
+                type="button"
+                class="back-button"
+                onclick="closeTopic()"
+            >
+                ← BACK
+            </button>
+
+            <h2 id="topic-title"></h2>
+
+            <div id="topic-text"></div>
+
+        </section>
+
+
+        <!-- Main Explanation -->
+
+        <section class="content-card">
+
+            <p>
+                Media sosial merupakan salah satu sarana komunikasi yang sudah menjadi bagian dari kehidupan sehari-hari. Melalui media sosial, kita dapat berkomunikasi dengan teman dan keluarga, mendapatkan informasi terbaru, mencari hiburan, serta mempelajari berbagai hal baru. Kemudahan dalam mengakses dan menggunakan media sosial membuat banyak orang menghabiskan waktu untuk melihat berbagai konten di dalamnya. Namun, media sosial juga dapat memberikan dampak negatif apabila digunakan secara berlebihan atau tidak bijak. Oleh karena itu, kita perlu menggunakan media sosial dengan benar dan bertanggung jawab agar manfaatnya dapat diperoleh tanpa menimbulkan dampak yang merugikan.
+            </p>
+
+            <p>
+                Salah satu cara menggunakan media sosial dengan bijak adalah dengan menentukan tujuan sebelum menggunakannya. Kita perlu mengetahui apakah media sosial digunakan untuk berkomunikasi, mencari informasi, belajar, atau sekadar mencari hiburan. Dengan memiliki tujuan yang jelas, kita dapat menggunakan media sosial sesuai dengan kebutuhan dan tidak mudah terdistraksi oleh berbagai konten yang muncul. Selain itu, kita juga perlu memilih konten yang kita lihat. Tidak semua informasi yang terdapat di media sosial bersifat positif atau benar. Oleh karena itu, kita harus memilah konten dan memilih informasi dari akun atau sumber yang terpercaya. Jika terdapat konten yang mengganggu atau memberikan pengaruh negatif, kita dapat menggunakan fitur seperti mute, unfollow, atau block untuk menyaring apa yang muncul di media sosial kita.
+            </p>
+
+            <p>
+                Selain memilih konten yang dikonsumsi, kita juga harus berhati-hati dalam membagikan sesuatu di media sosial. Sebelum mengunggah sebuah foto, video, atau informasi, kita perlu memikirkan apakah hal tersebut benar, bermanfaat, dan tidak merugikan orang lain. Kita tidak boleh langsung menyebarkan informasi yang belum diketahui kebenarannya karena dapat menyebabkan kesalahpahaman atau penyebaran berita palsu. Sebaiknya, informasi yang dibagikan adalah informasi yang netral, benar, dan memberikan manfaat bagi orang lain. Kita juga perlu menghargai perbedaan pendapat karena setiap orang memiliki pandangan dan kepentingan yang berbeda.
+            </p>
+
+            <p>
+                Hal penting lainnya adalah menjaga privasi dan keamanan diri. Kita sebaiknya tidak membagikan informasi pribadi secara sembarangan, seperti alamat rumah, nomor telepon, maupun data keuangan. Pengaturan privasi juga perlu digunakan untuk mengontrol siapa saja yang dapat melihat unggahan kita. Selain itu, kita sebaiknya tidak mudah menerima permintaan pertemanan dari orang yang tidak dikenal. Menjaga keamanan akun juga dapat dilakukan dengan memperbarui kata sandi secara berkala dan menggunakan autentikasi dua faktor apabila tersedia.
+            </p>
+
+            <p>
+                Penggunaan media sosial juga perlu dibatasi agar tidak mengganggu kegiatan sehari-hari. Menghabiskan terlalu banyak waktu di media sosial dapat membuat seseorang sulit mengatur waktu dan berisiko menimbulkan kebiasaan yang sulit dikendalikan. Karena itu, kita perlu menentukan batas waktu dalam menggunakan media sosial dan tetap memberikan waktu untuk belajar, beristirahat, melakukan hobi, serta berinteraksi secara langsung dengan keluarga dan teman. Kita juga dapat melakukan detoks media sosial dengan mengambil waktu tertentu untuk tidak membuka media sosial. Waktu tersebut dapat digunakan untuk melakukan kegiatan lain yang lebih bermanfaat, seperti membaca buku, berolahraga, atau menghabiskan waktu bersama orang-orang terdekat.
+            </p>
+
+            <p>
+                Dengan demikian, menggunakan media sosial dengan benar bukan berarti harus berhenti menggunakan media sosial, tetapi kita harus mampu menggunakannya secara bijak dan bertanggung jawab. Kita perlu menentukan tujuan penggunaan, memilih konten yang positif dan terpercaya, berhati-hati dalam membagikan informasi, menjaga privasi, serta membatasi waktu penggunaan. Dengan menerapkan kebiasaan tersebut, media sosial dapat menjadi sarana yang bermanfaat untuk berkomunikasi, memperoleh informasi, belajar, dan mendapatkan hiburan tanpa mengganggu kehidupan sehari-hari.
+            </p>
+
+        </section>
+
+
+        <!-- Footer -->
+
+        <footer>
+            © 2026 NETSCAPE YOUR WAY
+        </footer>
+
+    </main>
+
+
+    <!-- JavaScript -->
+
+    <script>
+
+        // Unlock Account
+
+        function unlockAccount() {
+
+            const passwordInput =
+                document.getElementById("password");
+
+            const errorMessage =
+                document.getElementById("error-message");
+
+            const verificationScreen =
+                document.getElementById("verification-screen");
+
+            const spotifyPlayer =
+                document.getElementById("spotify-player");
+
+            const password =
+                passwordInput.value;
+
+            if (password === "gaby94") {
+
+                errorMessage.textContent =
+                    "ACCESS GRANTED ✓";
+
+                errorMessage.className =
+                    "success";
+
+                setTimeout(function() {
+
+                    verificationScreen.classList.add("unlocked");
+
+                    if (spotifyPlayer) {
+
+                        spotifyPlayer.style.display = "block";
+
+                    }
+
+                }, 700);
+
+            } else {
+
+                errorMessage.textContent =
+                    "ACCESS DENIED — WRONG PASSWORD";
+
+                errorMessage.className =
+                    "error";
+
+                passwordInput.value = "";
+
+                passwordInput.focus();
+
+            }
+
+        }
+
+
+        // Enter key for password
+
+        document
+            .getElementById("password")
+            .addEventListener("keydown", function(event) {
+
+                if (event.key === "Enter") {
+
+                    unlockAccount();
+
+                }
+
+            });
+
+
+        // Topic Data
+
+        const topicData = {
+
+            jenis2: {
+
+                title: "Jenis-Jenis Media Sosial",
+
+                text: `
+
+                <p>
+                Media sosial memiliki berbagai jenis dengan fungsi yang berbeda. Contohnya Instagram dan TikTok yang berfokus pada berbagi foto, video, dan konten kreatif. WhatsApp digunakan untuk berkomunikasi melalui pesan, panggilan suara, dan video call.
+                </p>
+
+                <p>
+                Selain itu, YouTube digunakan untuk berbagi dan menonton video. Setiap platform memiliki karakteristik yang berbeda, sehingga kita perlu memilih media sosial sesuai dengan kebutuhan dan menggunakannya secara bertanggung jawab.
+                </p>
+
+                `
+
+            },
+
+
+            dampak: {
+
+                title: "Dampak Media Sosial",
+
+                text: `
+
+                <p>
+                Media sosial memberikan dampak positif, seperti mempermudah komunikasi, membantu memperoleh informasi, mendukung kegiatan belajar, dan menjadi tempat untuk mengembangkan kreativitas. Media sosial juga dapat digunakan untuk berbagi karya serta membangun hubungan dengan orang lain.
+                </p>
+
+                <p>
+                Namun, penggunaan media sosial yang tidak bijak dapat menimbulkan dampak negatif. Contohnya adalah penyebaran berita palsu, berkurangnya waktu belajar, gangguan privasi, dan konflik akibat komentar yang tidak tepat. Oleh karena itu, penggunaan media sosial perlu dilakukan secara seimbang dan bertanggung jawab.
+                </p>
+
+                `
+
+            },
+
+
+            Etika: {
+
+                title: "Etika Penggunaan Media Sosial",
+
+                text: `
+
+                <p>
+                Etika penggunaan media sosial berarti menerapkan sikap sopan, bertanggung jawab, dan menghargai orang lain ketika berinteraksi secara online. Kita perlu menggunakan bahasa yang baik, menghormati perbedaan pendapat, serta tidak menyebarkan informasi yang belum terbukti kebenarannya.
+                </p>
+
+                <p>
+                Selain itu, kita harus menjaga privasi diri sendiri dan orang lain. Sebelum mengunggah sesuatu, pikirkan dampaknya terhadap orang lain dan pastikan tidak melanggar hak privasi. Dengan menerapkan etika yang baik, media sosial dapat menjadi ruang yang lebih aman dan nyaman.
+                </p>
+
+                `
+
+            },
+
+
+            fungsi: {
+
+                title: "Fungsi Media Sosial",
+
+                text: `
+
+                <p>
+                Media sosial berfungsi sebagai sarana komunikasi dan pertukaran informasi. Melalui media sosial, kita dapat berkomunikasi dengan keluarga dan teman, memperoleh berita, mengikuti kegiatan pendidikan, serta menemukan berbagai pengetahuan baru.
+                </p>
+
+                <p>
+                Selain komunikasi dan informasi, media sosial juga berfungsi sebagai sarana hiburan, kreativitas, dan promosi. Pengguna dapat membagikan karya, memperkenalkan produk, dan berinteraksi dengan komunitas yang memiliki minat yang sama.
+                </p>
+
+                `
+
+            }
+
+        };
+
+
+        // Show Topic
+
+        function showTopic(topic) {
+
+            const detail =
+                document.getElementById("topic-detail");
+
+            const title =
+                document.getElementById("topic-title");
+
+            const text =
+                document.getElementById("topic-text");
+
+            if (!topicData[topic]) {
+
+                alert("Topik tidak ditemukan!");
+
+                return;
+
+            }
+
+            let topicClass = topic;
+
+            if (topic === "jenis2") {
+
+                topicClass = "jenis";
+
+            }
+
+            if (topic === "Etika") {
+
+                topicClass = "etika";
+
+            }
+
+            detail.className =
+                "content-card topic-detail " + topicClass;
+
+            title.textContent =
+                topicData[topic].title;
+
+            text.innerHTML =
+                topicData[topic].text;
+
+            detail.style.display = "block";
+
+            detail.scrollIntoView({
+
+                behavior: "smooth",
+
+                block: "center"
+
+            });
+
+        }
+
+
+        // Close Topic
+
+        function closeTopic() {
+
+            const detail =
+                document.getElementById("topic-detail");
+
+            detail.style.display = "none";
+
+        }
+
+
+        // Open Warning Popup
+
+        function openWarning() {
+
+            const popup =
+                document.getElementById("warning-popup");
+
+            if (popup) {
+
+                popup.style.display = "flex";
+
+            }
+
+        }
+
+
+        // Block Website
+
+        function blockWebsite() {
+
+            const popup =
+                document.getElementById("warning-popup");
+
+            if (popup) {
+
+                popup.style.display = "none";
+
+            }
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+    </script>
+
+</body>
+
+</html>

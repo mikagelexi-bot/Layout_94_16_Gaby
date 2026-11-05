@@ -1,0 +1,295 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/* =========================
+   STYLE HEADER
+========================= */
+
+.header {
+    background-image: url("header.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 145px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.header-character {
+    height: 140px;
+    width: auto;
+    object-fit: contain;
+}
+
+
+/* =========================
+   STYLE NAV MENU
+========================= */
+
+.topnav {
+    overflow: hidden;
+    background-color: rgb(137, 93, 70);
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: aliceblue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.topnav a:hover {
+    background-color: beige;
+    color: brown;
+}
+
+
+/* =========================
+   STYLE CONTENT
+========================= */
+
+.column {
+    float: left;
+    padding: 10px;
+}
+
+.column.side {
+    width: 25%;
+}
+
+.column.middle {
+    width: 50%;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* =========================
+   STYLE FOOTER
+========================= */
+
+.footer {
+    background-color: bisque;
+    padding: 10px;
+    text-align: center;
+}
+
+
+/* =========================
+   STYLE PADA TABEL
+========================= */
+
+table, th, td {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    width: 70%;
+}
+
+th, td {
+    padding: 5px;
+}
+
+tr {
+    background-color: bisque;
+}
+
+/* Memberi warna beda-beda pada tabel (ganjil/genap) */
+
+tr:nth-child(even) {
+    background-color: blanchedalmond;
+}
+
+tr:hover {
+    background-color: aquamarine;
+}
+
+hitam {
+    color: aliceblue;
+}
+
+.hitam {
+    color: aliceblue;
+}
+
+
+/* =========================
+   BACKGROUND LIST
+========================= */
+
+.listbackground {
+    background-image: url("bg2.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+/* =========================
+   TABEL KOTAK SESUAI TUGAS
+========================= */
+
+.kotak-table {
+    width: 60%;
+    margin: 25px auto;
+    border: 2px solid blue;
+    border-collapse: separate;
+    border-spacing: 2px;
+    background-color: blue;
+    table-layout: fixed;
+}
+
+.kotak-table td {
+    border: 1px solid blue;
+    text-align: center;
+    vertical-align: middle;
+    height: 35px;
+    padding: 3px;
+    font-size: 18px;
+    color: white;
+}
+
+.kotak-table .biru {
+    background-color: blue;
+}
+
+.kotak-table .cyan {
+    background-color: cyan;
+    color: blue;
+}
+
+.kotak-table td:hover {
+    background-color: hotpink;
+}
+
+
+/* =================================
+   TAMBAHAN STYLE TUGAS LIST
+================================= */
+
+/* Kotak utama seluruh list */
+
+.list-container {
+    width: 95%;
+    margin: 15px auto;
+    padding: 10px;
+    background-color: lightsalmon;
+}
+
+
+/* Judul setiap bagian */
+
+.list-container h3 {
+    font-size: 13px;
+    color: black;
+    margin: 0 0 7px 0;
+}
+
+
+/* =========================
+   1. DAFTAR BUAH-BUAHAN
+========================= */
+
+.fruit-box {
+    background-color: blueviolet;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.fruit-box ol {
+    margin: 0;
+    padding-left: 25px;
+    list-style-type: upper-roman;
+}
+
+.fruit-box li {
+    background-color: chartreuse;
+    border: 2px solid blueviolet;
+    padding: 5px;
+    font-size: 12px;
+    color: darkgreen;
+}
+
+
+/* =========================
+   2. LOREM IPSUM
+========================= */
+
+.lorem-box {
+    background-color: darkseagreen;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.lorem-box ul {
+    margin: 0;
+    padding-left: 25px;
+}
+
+.lorem-box li {
+    background-color: lightpink;
+    border: 1px solid darkseagreen;
+    padding: 5px;
+    font-size: 12px;
+    color: black;
+}
+
+
+/* =========================
+   3. MACAM-MACAM ICON
+========================= */
+
+.icon-box {
+    background-color: darkseagreen;
+    padding: 5px;
+}
+
+.icon-box ul {
+    margin: 0;
+    padding-left: 25px;
+}
+
+.icon-box li {
+    background-color: yellow;
+    border: 2px solid darkseagreen;
+    padding: 5px;
+    font-size: 12px;
+    color: black;
+}
+
+/* Style icon Font Awesome */
+
+.icon-box i {
+    margin-right: 5px;
+    color: black;
+}
+
+
+/* Efek hover pada list */
+
+.fruit-box li:hover,
+.lorem-box li:hover,
+.icon-box li:hover {
+    background-color: orange;
+    transition: 0.3s;
+}

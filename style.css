@@ -1,0 +1,19 @@
+/*  style eksternal css*/
+p{
+    color: deeppink;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 20pt;background-color: khaki;
+}
+h1{
+    color: cadetblue;
+    text-align: center;
+    text-decoration: overline; text-decoration-color: chartreuse;
+    text-decoration-style: wavy;
+}
+h2{text-decoration: line-through;}
+h3{text-decoration: underline}
+p.ps{text-decoration: overline;text-decoration: underline;}
+p.a{color: darksalmon;
+text-align: justify;}
+p.b{color: cadetblue; text-align: right;}
+p.c{color: aqua;font-size: medium;}
+p.d{color: bisque;text-align: left;}

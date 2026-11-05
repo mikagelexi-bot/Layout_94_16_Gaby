@@ -1,0 +1,1140 @@
+
+/* Custom fonts */
+
+@font-face {
+    font-family: "bounce";
+    src: url("super_bouncer/Super Bouncer.ttf");
+}
+
+@font-face {
+    font-family: "siru";
+    src: url("sirukota/Sirukota.ttf");
+}
+
+@font-face {
+    font-family: "tropi";
+    src: url("tropi_land/Tropi Land - (Demo) hanscostudio.com.ttf");
+}
+
+@font-face {
+    font-family: "fairy";
+    src: url("fairy_clovers/Fairy Clovers.otf");
+}
+
+@font-face {
+    font-family: "pixel";
+    src: url("pix32/Pix32.ttf");
+}
+
+
+/* Basic */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background-image: url("bg_main_all.gif");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/* Verification screen */
+
+#verification-screen {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("bg goggs.jpg");
+    background-size: cover;
+    background-position: center;
+
+    z-index: 99999;
+
+    opacity: 1;
+    visibility: visible;
+
+    transition:
+        opacity 0.8s ease,
+        visibility 0.8s ease;
+}
+
+
+/* Verification card */
+
+.verification-card {
+    width: 470px;
+
+    padding: 42px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 3px solid black;
+
+    box-shadow: 10px 10px 0 black;
+}
+
+
+/* System name */
+
+.system-name {
+    font-family: "bounce", serif;
+
+    font-size: 22px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+}
+
+
+/* Lock */
+
+.lock-icon {
+    font-size: 55px;
+
+    margin: 10px 0;
+}
+
+
+/* Verification title */
+
+.verification-card h1 {
+    margin: 10px 0 15px;
+
+    font-family: "bounce", serif;
+
+    font-size: 42px;
+
+    letter-spacing: 2px;
+}
+
+
+/* Welcome */
+
+.welcome-text {
+    color: #555;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* Account */
+
+.account-name {
+    margin: 25px 0;
+
+    font-family: "bounce", serif;
+
+    font-size: 25px;
+
+    letter-spacing: 3px;
+}
+
+
+/* Label */
+
+.verification-card label {
+    display: block;
+
+    text-align: left;
+
+    margin-bottom: 7px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+
+/* Password */
+
+.password-box {
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+    height: 55px;
+
+    padding: 0 15px;
+
+    background: white;
+
+    border: 2px solid black;
+}
+
+.password-box input {
+    flex: 1;
+
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    font-size: 16px;
+}
+
+.password-box span {
+    font-size: 20px;
+}
+
+
+/* Verification button */
+
+.verification-card button {
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border: 2px solid black;
+
+    background: black;
+
+    color: white;
+
+    font-family: "bounce", serif;
+
+    font-size: 17px;
+
+    letter-spacing: 3px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.verification-card button:hover {
+    background: white;
+
+    color: black;
+
+    transform: translate(-3px, -3px);
+
+    box-shadow: 5px 5px 0 black;
+}
+
+
+/* Error */
+
+#error-message {
+    min-height: 18px;
+
+    margin: 15px 0 0;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+#error-message.error {
+    color: red;
+}
+
+#error-message.success {
+    color: green;
+}
+
+
+/* Status */
+
+.security-status {
+    margin-top: 25px;
+
+    color: #888;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+}
+
+
+/* Unlock */
+
+#verification-screen.unlocked {
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+}
+
+
+/* Main content */
+
+#main-content {
+    min-height: 100vh;
+
+    padding: 60px 8% 70px;
+
+    background-image: url("bg main 3.gif");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+}
+
+
+/* Retro header */
+
+.retro-header {
+    text-align: center;
+
+    margin: 0 auto 40px;
+
+    padding: 25px 20px 22px;
+
+    max-width: 1000px;
+
+    background: rgba(10, 35, 65, 0.78);
+
+    border: 3px solid #42f5e9;
+
+    box-shadow:
+        8px 8px 0 #ff72d2,
+        0 0 0 4px #164c78;
+
+    border-radius: 5px;
+}
+
+
+/* Small title */
+
+.small-title {
+    font-family: "siru", serif;
+
+    font-size: 18px;
+
+    letter-spacing: 4px;
+
+    color: white;
+
+    margin: 0 0 18px;
+
+    text-shadow:
+        2px 2px 0 #164c78,
+        -1px -1px 0 #164c78;
+}
+
+
+/* Main title */
+
+.retro-header h2 {
+    margin: 15px auto;
+
+    max-width: 900px;
+
+    font-family: "pixel", serif;
+
+    font-size: 42px;
+
+    line-height: 1.15;
+
+    letter-spacing: 1px;
+
+    color: #cfffff;
+
+    -webkit-text-stroke: 1px #42f5e9;
+
+    text-shadow:
+        3px 3px 0 #ff72d2,
+        -1px -1px 0 white;
+}
+
+
+/* Subtitle */
+
+.subtitle {
+    display: inline-block;
+
+    margin: 20px auto 0;
+
+    padding: 8px 14px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    color: white;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    border: 2px solid white;
+
+    text-shadow:
+        2px 2px 0 #164c78;
+}
+
+
+/* Topic section */
+
+.topic-section {
+    max-width: 950px;
+
+    margin: 30px auto 40px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+
+/* Topic cards */
+
+.topic-card {
+    width: 100%;
+
+    padding: 10px;
+
+    font-family: Arial, sans-serif;
+
+    text-align: center;
+
+    background: white;
+
+    border: 2px solid black;
+
+    box-shadow: 5px 5px 0 black;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+    appearance: none;
+}
+
+
+/* Topic images */
+
+.topic-card img {
+    width: 100%;
+
+    height: 250px;
+    object-fit: cover;
+
+    object-position: center;
+
+    display: block;
+
+    border: 1px solid black;
+}
+
+
+/* Topic title */
+
+.topic-card h3 {
+    margin: 10px 0;
+
+    font-family: "bounce", serif;
+
+    font-size: 17px;
+
+    text-align: center;
+
+    line-height: 1.2;
+}
+
+
+/* Explore */
+
+.topic-card span {
+    display: block;
+
+    padding: 7px;
+
+    background: black;
+
+    color: white;
+
+    font-family: "bounce", serif;
+
+    font-size: 10px;
+
+    text-align: center;
+
+    letter-spacing: 1px;
+}
+
+
+/* Hover */
+
+.topic-card:hover {
+    transform: translate(-4px, -4px);
+
+    box-shadow: 9px 9px 0 #ff3eb5;
+}
+
+.topic-card:hover span {
+    background: #42f5e9;
+
+    color: black;
+}
+
+
+
+/* topic explanation box */
+#topic-detail {
+  display: none;
+  margin: 35px auto;
+  padding: 30px;
+  max-width: 850px;
+  border: 4px solid #30204f;
+  border-radius: 20px;
+  box-shadow: 8px 8px 0 #30204f;
+  animation: popUp 0.5s ease;
+}
+
+/* topic title */
+#topic-detail h2 {
+  font-size: 38px;
+  margin-bottom: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* topic paragraph */
+#topic-detail p {
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #30204f;
+}
+
+/* topic 1: jenis-jenis media sosial */
+#topic-detail.jenis {
+  background: #ffd6e7;
+  border-color: #c73878;
+  box-shadow: 8px 8px 0 #c73878;
+}
+
+#topic-detail.jenis h2 {
+  font-family: "Super Bouncer", sans-serif;
+  color: #c73878;
+  text-shadow: 3px 3px 0 #fff4a8;
+}
+
+/* topic 2: dampak media sosial */
+#topic-detail.dampak {
+  background: #d6f5ff;
+  border-color: #2584b8;
+  box-shadow: 8px 8px 0 #2584b8;
+}
+
+#topic-detail.dampak h2 {
+  font-family: "Sirukota", sans-serif;
+  color: #2584b8;
+  text-shadow: 3px 3px 0 #ffffff;
+}
+
+/* topic 3: etika bermedia sosial */
+#topic-detail.etika {
+  background: #e8ddff;
+  border-color: #7651b8;
+  box-shadow: 8px 8px 0 #7651b8;
+}
+
+#topic-detail.etika h2 {
+  font-family: "Tropi Land", cursive;
+  color: #7651b8;
+  text-shadow: 3px 3px 0 #ffd6f6;
+}
+
+/* topic 4: fungsi media sosial */
+#topic-detail.fungsi {
+  background: #fff0b8;
+  border-color: #d58a24;
+  box-shadow: 8px 8px 0 #d58a24;
+}
+
+#topic-detail.fungsi h2 {
+  font-family: "Fairy Clovers", cursive;
+  color: #d58a24;
+  text-shadow: 3px 3px 0 #ffffff;
+}
+
+/* pop up animation */
+@keyframes popUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Back button */
+
+.back-button {
+    padding: 9px 15px;
+
+    background: black;
+
+    color: white;
+
+    border: 2px solid black;
+
+    cursor: pointer;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+}
+
+.back-button:hover {
+    background: #42f5e9;
+
+    color: black;
+}
+
+
+/* Content card */
+
+.content-card {
+    max-width: 850px;
+
+    margin: 35px auto;
+
+    padding: 35px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 3px solid black;
+
+    box-shadow: 10px 10px 0 black;
+}
+
+
+/* Content paragraph */
+
+.content-card p {
+    margin: 22px 0;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    text-align: justify;
+
+    text-indent: 35px;
+}
+
+
+/* Footer */
+
+footer {
+    margin-top: 50px;
+
+    text-align: center;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    color: white;
+
+    text-shadow: 2px 2px 0 #164c78;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    #main-content {
+        padding: 40px 20px 50px;
+    }
+
+    .verification-card {
+        width: 90%;
+
+        padding: 30px 25px;
+    }
+
+    .verification-card h1 {
+        font-size: 32px;
+    }
+
+    .retro-header {
+        padding: 25px 15px;
+
+        margin-bottom: 35px;
+    }
+
+    .small-title {
+        font-size: 16px;
+
+        letter-spacing: 3px;
+    }
+
+    .retro-header h2 {
+        font-size: 32px;
+
+        letter-spacing: 1px;
+    }
+
+    .subtitle {
+        font-size: 11px;
+
+        letter-spacing: 1px;
+
+        padding: 8px 12px;
+    }
+
+    .topic-section {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .topic-card img {
+        height: 150px;
+    }
+
+    .content-card {
+        padding: 25px;
+    }
+
+    .content-card p {
+        font-size: 15px;
+
+        line-height: 1.7;
+
+        text-indent: 25px;
+    }
+
+}
+
+/* different explanation box colors */
+
+/* jenis-jenis media sosial */
+#topic-detail.jenis {
+  background: #ffd6e7 !important;
+  border: 5px solid #d93682 !important;
+  box-shadow: 10px 10px 0 #d93682 !important;
+}
+
+#topic-detail.jenis #topic-title {
+  font-family: "Super Bouncer", sans-serif !important;
+  color: #d93682 !important;
+  text-shadow: 4px 4px 0 #fff4a8 !important;
+}
+
+/* dampak media sosial */
+#topic-detail.dampak {
+  background: #c9f3ff !important;
+  border: 5px solid #238bc0 !important;
+  box-shadow: 10px 10px 0 #238bc0 !important;
+}
+
+#topic-detail.dampak #topic-title {
+  font-family: "Sirukota", sans-serif !important;
+  color: #238bc0 !important;
+  text-shadow: 4px 4px 0 #ffffff !important;
+}
+
+/* etika media sosial */
+#topic-detail.etika {
+  background: #e4d5ff !important;
+  border: 5px solid #8252c7 !important;
+  box-shadow: 10px 10px 0 #8252c7 !important;
+}
+
+#topic-detail.etika #topic-title {
+  font-family: "Tropi Land", cursive !important;
+  color: #8252c7 !important;
+  text-shadow: 4px 4px 0 #ffc9f1 !important;
+}
+
+/* fungsi media sosial */
+#topic-detail.fungsi {
+  background: #fff0b8 !important;
+  border: 5px solid #d58a24 !important;
+  box-shadow: 10px 10px 0 #d58a24 !important;
+}
+
+#topic-detail.fungsi #topic-title {
+  font-family: "Fairy Clovers", cursive !important;
+  color: #d58a24 !important;
+  text-shadow: 4px 4px 0 #ffffff !important;
+}
+
+/* colorful explanation boxes */
+
+/* jenis-jenis */
+#topic-detail.jenis2 {
+    background: #ffd6e7 !important;
+    border: 4px solid #d93682 !important;
+    box-shadow: 10px 10px 0 #d93682 !important;
+}
+
+#topic-detail.jenis2 #topic-title {
+    font-family: "bounce", serif !important;
+    color: #d93682 !important;
+    text-shadow:
+        3px 3px 0 #fff4a8,
+        0 0 12px #ff91c5 !important;
+}
+
+
+/* dampak */
+#topic-detail.dampak {
+    background: #c9f3ff !important;
+    border: 4px solid #238bc0 !important;
+    box-shadow: 10px 10px 0 #238bc0 !important;
+}
+
+#topic-detail.dampak #topic-title {
+    font-family: "siru", serif !important;
+    color: #238bc0 !important;
+    text-shadow:
+        3px 3px 0 white,
+        0 0 12px #65ddff !important;
+}
+
+
+/* etika */
+#topic-detail.etika {
+    background: #e4d5ff !important;
+    border: 4px solid #8252c7 !important;
+    box-shadow: 10px 10px 0 #8252c7 !important;
+}
+
+#topic-detail.etika #topic-title {
+    font-family: "tropi", serif !important;
+    color: #8252c7 !important;
+    text-shadow:
+        3px 3px 0 #ffc9f1,
+        0 0 12px #c59bff !important;
+}
+
+
+/* fungsi */
+#topic-detail.fungsi {
+    background: #fff0b8 !important;
+    border: 4px solid #d58a24 !important;
+    box-shadow: 10px 10px 0 #d58a24 !important;
+}
+
+#topic-detail.fungsi #topic-title {
+    font-family: "fairy", serif !important;
+    color: #d58a24 !important;
+    text-shadow:
+        3px 3px 0 white,
+        0 0 12px #ffcf65 !important;
+}
+
+
+/* enlarge the second topic image */
+
+.topic-card:nth-child(2) img {
+    height: 165px;
+    object-fit: cover;
+}
+
+
+/* explanation text */
+
+#topic-detail #topic-text p {
+    color: #30204f !important;
+}
+/* clickable subtitle */
+
+.subtitle {
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.subtitle:hover {
+    background: #42f5e9;
+    color: black;
+    transform: translate(-4px, -4px);
+    box-shadow: 6px 6px 0 #ff72d2;
+}
+
+
+/* warning popup */
+
+#warning-popup {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    z-index: 9999;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+
+    background: rgba(5, 15, 35, 0.85);
+}
+
+
+/* warning card */
+
+.warning-card {
+    width: 700px;
+    max-width: 95%;
+
+    padding: 25px;
+
+    text-align: center;
+
+    background: #fff0b8;
+
+    border: 5px solid #ff3eb5;
+
+    box-shadow:
+        10px 10px 0 #42f5e9,
+        0 0 25px #ff72d2;
+
+    animation: popUp 0.4s ease;
+}
+
+.warning-card img {
+    display: block;
+
+    width: 100%;
+    max-height: 430px;
+
+    object-fit: contain;
+
+    border: 3px solid black;
+
+    background: white;
+}
+
+
+/* warning text */
+
+.warning-text {
+    margin: 20px 0;
+
+    font-family: "bounce", sans-serif;
+
+    font-size: 18px;
+
+    line-height: 1.5;
+
+    color: #30204f;
+}
+
+
+/* block button */
+
+.block-button {
+    padding: 14px 28px;
+
+    background: #ff3eb5;
+
+    color: white;
+
+    border: 3px solid black;
+
+    box-shadow: 5px 5px 0 black;
+
+    font-family: "pixel", sans-serif;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.block-button:hover {
+    background: #42f5e9;
+
+    color: black;
+
+    transform: translate(-3px, -3px);
+
+    box-shadow: 8px 8px 0 black;
+}
+
+
+/* popup animation */
+
+@keyframes popUp {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* subtitle and spotify layout */
+
+.header-bottom {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+
+    margin-top: 20px;
+}
+
+
+/* spotify player */
+
+#spotify-player {
+    display: none;
+
+    width: 300px;
+
+    border: 3px solid #42f5e9;
+
+    box-shadow: 5px 5px 0 #ff72d2;
+
+    background: #10152d;
+
+    animation: popUp 0.5s ease;
+}
+
+#spotify-player iframe {
+    display: block;
+
+    width: 100%;
+}
+
+
+/* mobile */
+
+@media (max-width: 600px) {
+
+    .header-bottom {
+        flex-direction: column;
+    }
+
+    #spotify-player {
+        width: 100%;
+        max-width: 300px;
+    }
+
+}
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+/* style header */
+.header {
+    background-image: url("header.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 145px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.header-character {
+    height: 140px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* style nav menu */
+.topnav{
+    overflow: hidden;
+    background-color: rgb(137, 93, 70);
+}
+
+.topnav a{
+    float: left;
+    display: block;
+    color: aliceblue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.topnav a:hover{
+    background-color: beige;
+    color: brown;
+}
+/* style content */
+.column{
+    float: left;
+    padding: 10px;
+}
+
+.column.side{
+    width: 25%;
+}
+
+.column.middle{
+    width: 50%;
+}
+
+.row::after{
+    content:"";
+    display: table;
+    clear: both;
+}

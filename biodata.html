@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Biodata Diri</title>
+        <link rel="stylesheet" href="biodatastyle.css">
+        <link rel="icon" type="image/png" href="cat_icon_3-removebg-preview.png" class="logo">
+    </head>
+    <body>
+        <div id="search-screen">
+
+    <div class="google-logo">
+        Google
+    </div>
+
+    <div class="search-box">
+        <span class="search-icon">⌕</span>
+
+        <input
+            type="text"
+            id="search-input"
+            placeholder="Search"
+            autocomplete="off"
+        >
+
+        <span class="mic-icon">●</span>
+    </div>
+
+    <div class="search-buttons">
+        <button onclick="searchWebsite()">Google Search</button>
+        <button onclick="searchWebsite()">I'm Feeling Lucky</button>
+    </div>
+
+    <p class="search-hint">
+        Try searching: <b>Biodata Gaby</b>
+    </p>
+
+</div>
+        <div id="popup" class="popup-overlay">
+
+    <div class="popup-box">
+
+        <button class="popup-close" onclick="closePopup()">×</button>
+
+        <img src="S.png" alt="Popup" class="popup-image">
+
+    </div>
+
+</div>
+        <h2> ⋆˚꩜｡ Selamat Datang Di Web Pertama Saya! ⋆˚꩜｡ </h2>
+        <h1>⋆˚࿔ Biodata Diri ⋆˚࿔</h1>
+        <div class="biodata">
+            <div class="content">
+                <div class="foto">
+<img src="masanow.jpeg" alt="Foto Gaby" class="top">
+<img src="foto kicik.jpeg" alt="Foto masa kicik" class="bottom">
+                </div>
+                <div class="isi">
+                    <p>Nama Lengkap : Gabriela Calista Kirana</p>
+                    <p>Tanggal Lahir :24 Januari 2012 </p>
+                    <p>Tempat Lahir : Jakarta</p>
+                    <p>Alamat : Grogol, Jakarta Barat </p>
+                    <p>Email : gabriela_10089@smp.santaursulajakarta.sch.id</p>
+                    <p>motto : “Freedom is the oxygen of a soul"</p>
+                    <p>Pesan :  "Ketika kamu tahu apa yang kamu inginkan, dan sangat menginginkannya, kamu akan menemukan cara untuk mendapatkannya."</p>
+
+                </div>
+            </div>
+<script>
+
+function closePopup() {
+
+    document.getElementById("popup").style.display = "none";
+
+}
+
+
+function searchWebsite() {
+
+    let keyword = document.getElementById("search-input").value
+        .toLowerCase()
+        .trim();
+
+    if (keyword === "biodata gaby") {
+
+        document.getElementById("search-screen")
+            .classList.add("hide-search");
+
+    } else {
+
+        alert("Hmm... coba cari \"Biodata Gaby\" dulu yaa!");
+
+    }
+
+}
+
+
+document.getElementById("search-input").addEventListener("keydown", function(event) {
+
+    if (event.key === "Enter") {
+
+        searchWebsite();
+
+    }
+
+});
+
+</script>
+
+        </div>
+        <h2 align="center">𐂐⋆.𐙚 Makanan Favorit (๑ᵔ⤙ᵔ๑)</h2>
+        <div class="mbg">
+            <div><img src="geprek.jpg" alt="Ayam Geprek" width="200px" height="210px" class="mam">
+            <p class="external">Geprek</p>
+            </div>
+             <div><img src="mochifood.jpg" alt="Mochi" width="200px" height="210px" class="mam">
+             <p class="external">Mochi</p>
+              </div>
+            <div><img src="kebab.jpg" alt="Kebab" width="200px" height="210px" class="mam">
+                <p class="external">Kebab</p>
+                 </div>
+           <div> <img src="sushi.jpg" alt="sushi" width="200px" height="210px" class="mam">
+            <p class="external">Sushi</p>
+             </div>
+            <div><img src="tomyum.jpg" alt="Tomyum" width="200px" height="210px" class="mam">
+            <p class="external">Tomyum</p>     
+            </div>
+
+            
+        </div>
+        </div>
+        <h2 class="title2" align="center">🎮 Hobi 🍿</h2>
+        <div class="mbg">
+            <div><img src="watch.jpg" alt="Nonton" width="200px" height="210px" class="mam">
+            <p class="external">Nonton</p>
+            </div>
+             <div><img src="baca.jpg" alt="novel" width="200px" height="210px" class="mam">
+             <p class="external">Membaca</p>
+              </div>
+            <div><img src="draw.jpg" alt="Menggambar" width="200px" height="210px" class="mam">
+                <p class="external">Menggambar</p>
+                 </div>
+           <div> <img src="baking.jpg" alt="baking" width="200px" height="210px" class="mam">
+            <p class="external">Baking</p>
+             </div>
+            <div><img src="game.jpg" alt="Gaming" width="200px" height="210px" class="mam">
+            <p class="external">Gaming</p>     
+            </div>
+
+        </div>
+
+         <h2 align="center">𝜗𝜚⋆₊˚ Selebriti Favorit 𝜗𝜚⋆₊˚</h2>
+        <div class="mbg">
+            <div><img src="loveee.jpg" alt="Sabrina Carpenter" width="200px" height="210px" class="mam">
+            <p class="external">Sabrina</p>
+            </div>
+             <div><img src="szaaaa.jpg" alt="SZA" width="200px" height="210px" class="mam">
+             <p class="external">SZA</p>
+              </div>
+            <div><img src="niki.jpg" alt="Niki" width="200px" height="210px" class="mam">
+                <p class="external">Niki</p>
+                 </div>
+           <div> <img src="naninani.jpg" alt="Nani" width="200px" height="210px" class="mam">
+            <p class="external">Nani</p>
+             </div>
+            <div><img src="daniel.jpg" alt="Daniel Caesar" width="200px" height="210px" class="mam">
+            <p class="external">Daniel Caesar</p>     
+            </div>
+
+             </div>
+        </div>
+        <h2 class="title2" align="center">♬⋆.˚ Musik Favorit ♬⋆.˚</h2>
+        <div class="mbg">
+            <div><img src="valentina.jpg" alt="Valentina" width="280px" height="300px" class="mam music-img">
+            <p class="external">Valentina</p>
+            <audio controls>
+        <source src="Valentina.mp3" type="audio/mpeg">
+    </audio>
+            </div>
+             <div><img src="anaheimfinal.png" alt="anaheim" width="280px" height="300px" class="mam music-img">
+             <p class="external">Anaheim</p>
+              <audio controls>
+             <source src="anaheim.mp3" type="audio/mpeg">
+    </audio>
+              </div>
+            <div><img src="snooze.jpg" alt="Snooze" width="280px" height="300px" class="mam music-img">
+                <p class="external">Snooze</p>
+                <audio controls>
+             <source src="SZA - Snooze (Audio).mp3" type="audio/mpeg">
+    </audio>
+                 </div>
+           
+           
+
+           </div> 
+<h2 class="title3" align="center">𝄞⋆ ݁♪ . My Favorite Playlist 𝄞⋆ ݁♪ .</h2>
+        <div class="mbg">
+            
+          
+
+             </div>
+<div class="music-player">
+
+    <section class="spotify-section">
+        <iframe
+            src="https://open.spotify.com/embed/playlist/55DFd02jXvactglTmstC4Y?utm_source=generator"
+            width="100%"
+            height="352"
+            frameborder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy">
+        </iframe>
+    </section>
+
+    <div class="record">
+        <img src="disc.png" alt="Vinyl Disc">
+    </div>
+
+</div>
+<h2 class="title2">⋆˚ End Of Journey ⋆˚</h2>
+
+<div class="book-section">
+
+    <div class="book-container">
+
+      
+        <img src="scrap book.png" class="book">
+
+        
+        <img src="star removed.png" class="deco deco1">
+        <img src="cat round.png" class="deco deco2">
+        <img src="ribbon.png" class="deco deco3">
+        <img src="lily.png" class="deco deco4">
+        <img src="button.png" class="deco deco5">
+        <img src="suhi.png" class="deco deco6">
+
+    </div>
+
+</div>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+body{
+    background-color: cadetblue;
+    background-image: url("calendar bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+img.ukuran{
+    width: 400px;
+    height: 300px;
+}
+img.lengkungan{
+ border-radius: 0% 20% 0% 20%;
+ width: 300px;
+ height: 200px;
+ padding: 10px;
+ /* kiri kanan (atas, kanan (kiri */
+}
+div.kelompok{
+    height: 400px;
+    width: 300px;
+    border-radius: 20%;
+    background-color: aliceblue;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+div.kelompok img{
+    height: 300px;
+    width: 250px;border-radius: 20%;
+    border: 1px solid white;
+}
+div.efek{
+    height: 350px;
+    width: 300px;
+    border-radius: 20%;
+   background-color: cadetblue;
+    text-align: center;
+    padding: 10px;
+}
+div.efek img{
+    height: 300px;
+    width: 250px;
+    border-radius: 20%;
+
+}
+div.efek:hover{
+height: 400px;
+width: 300px;
+background-color: hotpink;
+box-shadow: 15px 15px 10px darkblue;
+}
+p.internal{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30pt; 
+}
+p.external{
+    font-family: "cheese milky";
+    font-size: 30pt;
+}
+/* format font : otf/ttf */
+@font-face {
+    font-family: "cheese milky";
+    src: url("cheese_milky/Cheese\ Milky.otf");
+}
+    
